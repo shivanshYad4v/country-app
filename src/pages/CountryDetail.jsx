@@ -8,7 +8,7 @@ const CountryDetail = () => {
   const [country, setCountry] = useState(null)
 
   useEffect(() => {
-    fetch('../../data.json')
+    fetch('../../public/data.json')
       .then((res) => res.json())
       .then((data) =>
         setCountry(data.find((country) => country.name === countryName))

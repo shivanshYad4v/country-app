@@ -10,7 +10,7 @@ const Home = () => {
   const [showRegions, setShowRegions] = useState(false)
 
   useEffect(() => {
-    fetch('../../data.json')
+    fetch('../../public/data.json')
       .then((res) => res.json())
       .then((data) => setCountriesArray(data))
   }, [])
