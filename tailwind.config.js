@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -7,12 +8,12 @@ export default {
         sans: ['Nunito Sans', 'sans-serif'],
       },
       colors: {
-        'clr-dark-blue': 'hsl(209, 23%, 22%)', // Dark mode elements
-        'clr-very-dark-blue-1': 'hsl(207, 26%, 17%)', // Dark mode background
-        'clr-very-dark-blue-2': 'hsl(200, 15%, 8%)', // Light mode text
-        'clr-dark-gray': 'hsl(0, 0%, 52%)', // Light mode input
-        'clr-light-gray': 'hsl(0, 0%, 98%)', // Light mode background
-        'clr-white': 'hsl(0, 0%, 100%)', // Dark mode text & Light mode elements
+        'clr-dark-blue-400': 'hsl(209, 23%, 22%)',
+        'clr-dark-blue-600': 'hsl(207, 26%, 17%)',
+        'clr-dark-blue-800': 'hsl(200, 15%, 8%)',
+        'clr-gray-600': 'hsl(0, 0%, 52%)',
+        'clr-gray-200': 'hsl(0, 0%, 98%)',
+        'clr-white': 'hsl(0, 0%, 100%)',
       },
     },
   },

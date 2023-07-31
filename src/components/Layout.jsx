@@ -1,14 +1,14 @@
-import { Outlet } from 'react-router-dom'
 import Header from './Header'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div className="wrapper">
+    <>
       <Header />
-      <main className="bg-clr-very-dark-blue-1 text-[14px]">
+      <main className="min-h-[100vh] bg-clr-gray-200 dark:bg-clr-dark-blue-600 text-[14px] text-clr-dark-blue-800 dark:text-clr-white">
         <Outlet />
       </main>
-    </div>
+    </>
   )
 }
 

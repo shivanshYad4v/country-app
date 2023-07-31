@@ -4,11 +4,11 @@ This is a React application that provides information about different countries 
 
 ## Screenshots
 
-<!-- ![Dark Theme](screenshots/dark-theme.png)
+![Dark Theme](screenshots/dark-theme.png)
 _Dark Theme_
 
 ![Light Theme](screenshots/light-theme.png)
-_Light Theme_ -->
+_Light Theme_
 
 ## Live Site
 
@@ -33,11 +33,11 @@ The project is built using the following technologies:
 
 ## Installation and Usage
 
-- Clone the repository: `git clone `
+- Clone the repository: `git clone https://github.com/your-username/rest-countries-api.git`
 - Navigate to the project directory: `cd rest-countries-api`
 - Run `npm install` to install project dependencies.
 - Run `npm run dev` to start the development server.
-- Open your browser and visit `http://localhost:3000` ((or the specified port)) to view the application.
+- Open your browser and visit `http://localhost:3000` (or the specified port) to view the application.
 
 ## Folder Structure
 

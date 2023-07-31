@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  header, 
+  .search,
+  .filter,
+  .filter-selection,
+  .card,
+  .back-btn,
+  .border-country {
+    box-shadow: 1px 1px 10px 2px hsla(0, 0%, 0%, 0.185);
+  }
+}

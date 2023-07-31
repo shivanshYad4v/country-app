@@ -29,25 +29,25 @@ const Home = () => {
   }
 
   return (
-    <div className="w-[90%] mx-auto max-w-[1200px] py-7">
-      <article className="space-y-12 text-clr-white">
+    <article className="w-[85%] max-w-[1200px] mx-auto py-7">
+      <section className="grid gap-12 font-semibold text-clr-dark-blue-800 dark:text-clr-white md:flex md:justify-between md:items-center">
         <form
           action="#"
-          className="flex items-center px-10 py-4 rounded-md gap-7 bg-clr-dark-blue"
+          className="max-w-[35rem] flex items-center flex-1 px-10 py-4 rounded-md search bg-clr-white gap-7 dark:bg-clr-dark-blue-400"
           onSubmit={(e) => e.preventDefault()}
         >
-          <CgSearch className="text-xl" />
+          <CgSearch className="text-xl text-clr-gray-600 dark:text-clr-white" />
           <input
             type="text"
             placeholder="Search for a country..."
-            className="bg-transparent outline-none placeholder-clr-white"
+            className="flex-1 bg-transparent outline-none placeholder-clr-gray-600 dark:placeholder-clr-white"
             value={searchInput}
             onChange={handleSearchInputChange}
           />
         </form>
-        <div className="space-y-2">
+        <div className="space-y-2 ">
           <div
-            className="flex w-[13rem] bg-clr-dark-blue items-center justify-between px-6 py-4 rounded-md cursor-pointer"
+            className="w-[13rem] flex items-center bg-clr-white justify-between px-6 py-4 rounded-md cursor-pointer filter dark:bg-clr-dark-blue-400"
             onClick={() => setShowRegions((prev) => !prev)}
           >
             <p>{selectedRegion || 'Filter by Region'}</p>
@@ -59,11 +59,11 @@ const Home = () => {
           <div
             className={`${
               showRegions ? 'grid' : 'hidden'
-            } justify-items-start absolute bg-clr-dark-blue w-[13rem] py-4 px-6 rounded-md gap-1.5`}
+            } justify-items-start absolute bg-clr-white dark:bg-clr-dark-blue-400 filter-selection w-[13rem] py-4 px-6 rounded-md gap-1.5`}
           >
             <button onClick={() => handleRegionClick('Africa')}>Africa</button>
-            <button onClick={() => handleRegionClick('America')}>
-              America
+            <button onClick={() => handleRegionClick('Americas')}>
+              Americas
             </button>
             <button onClick={() => handleRegionClick('Asia')}>Asia</button>
             <button onClick={() => handleRegionClick('Europe')}>Europe</button>
@@ -72,8 +72,8 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </article>
-      <article className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      </section>
+      <section className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {countriesArray
           .filter(
             (country) =>
@@ -81,9 +81,9 @@ const Home = () => {
               (!selectedRegion || country.region === selectedRegion)
           )
           .map((country) => (
-            <section
+            <div
               key={country.numericCode}
-              className="max-w-[300px] mx-auto overflow-hidden rounded-md text-clr-light-gray"
+              className="card max-w-[270px] mx-auto overflow-hidden rounded-md"
             >
               <Link to={`/${country.name}`}>
                 <img
@@ -91,36 +91,30 @@ const Home = () => {
                   src={country.flags.png}
                   alt=""
                 />
-                <div className="px-6 bg-clr-dark-blue py-7">
-                  <p className="mb-4 text-lg font-extrabold text-white name">
+                <div className="h-full px-6 bg-clr-white dark:bg-clr-dark-blue-400 py-7">
+                  <p className="mb-4 text-lg font-extrabold">
                     {country.name}
                   </p>
-                  <div className="grid gap-1 mb-3">
+                  <div className="mb-3 space-y-1 text-clr-dark-blue-800 dark:text-clr-white">
                     <p>
-                      <span className="font-semibold text-clr-white">
-                        Population:
-                      </span>{' '}
+                      <span className="font-semibold ">Population:</span>{' '}
                       {country.population.toLocaleString()}
                     </p>
                     <p>
-                      <span className="font-semibold text-clr-white">
-                        Region:
-                      </span>{' '}
+                      <span className="font-semibold ">Region:</span>{' '}
                       {country.region}
                     </p>
                     <p>
-                      <span className="font-semibold text-clr-white">
-                        Capital:
-                      </span>{' '}
+                      <span className="font-semibold ">Capital:</span>{' '}
                       {country.capital}
                     </p>
                   </div>
                 </div>
               </Link>
-            </section>
+            </div>
           ))}
-      </article>
-    </div>
+      </section>
+    </article>
   )
 }
 
