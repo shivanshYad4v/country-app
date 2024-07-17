@@ -9,7 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/:countryName" element={<CountryDetail />} />
+`         <Route path="/:countryName" element={<CountryDetail />} />
+`         <Route path="/:countryName" element={<CountryDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

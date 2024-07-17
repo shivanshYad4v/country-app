@@ -57,19 +57,14 @@ const Home = () => {
             {!selectedRegion && <IoIosArrowDown />}
           </div>
           <div
-            className={`${
-              showRegions ? 'grid' : 'hidden'
-            } justify-items-start absolute bg-clr-white dark:bg-clr-dark-blue-400 filter-selection w-[13rem] py-4 px-6 rounded-md gap-1.5`}
+            className={`${showRegions ? 'grid' : 'hidden'
+              } justify-items-start absolute bg-clr-white dark:bg-clr-dark-blue-400 filter-selection w-[13rem] py-4 px-6 rounded-md gap-1.5`}
           >
             <button onClick={() => handleRegionClick('Africa')}>Africa</button>
-            <button onClick={() => handleRegionClick('Americas')}>
-              Americas
-            </button>
+            <button onClick={() => handleRegionClick('Americas')}>Americas</button>
             <button onClick={() => handleRegionClick('Asia')}>Asia</button>
             <button onClick={() => handleRegionClick('Europe')}>Europe</button>
-            <button onClick={() => handleRegionClick('Oceania')}>
-              Oceania
-            </button>
+            <button onClick={() => handleRegionClick('Oceania')}>Oceania</button>
           </div>
         </div>
       </section>
